@@ -4,6 +4,7 @@ import ProductItems from './ProductItems'
 
 class ManageProducts extends Component{
         render(){
+            let {products} = this.props; 
             return (
             	<div class="container">
             			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -14,15 +15,15 @@ class ManageProducts extends Component{
                                     <thead>
                                       <tr>
                                         <th className="text-center">STT</th>
-                                        <th className="text-center">MÃ SP</th>
-                                        <th className="text-center">TÊN</th>
-                                        <th className="text-center">GIÁ</th>
-                                        <th className="text-center">TRẠNG THÁI</th>
+                                        <th className="text-center">CODE</th>
+                                        <th className="text-center">NAME</th>
+                                        <th className="text-center">PRICE</th>
+                                        <th className="text-center">MADE BY</th>
                                         <th className="text-center">ACTION</th>
                                       </tr>
                                     </thead>
                                     <tbody>
-                                        <ProductItems />
+                                      {this.props.children} 
                                     </tbody>
                                   </table>
                                 </div>

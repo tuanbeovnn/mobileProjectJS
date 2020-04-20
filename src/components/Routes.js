@@ -4,6 +4,7 @@ import ProductListPage from './../ProductListPage/ProductListPage';
 import About from './About';
 import ProductContainer from './../containers/productcontainer';
 import NotFound from './NotFound';
+import ProductActionPage from './../pages/ProductActionPage/ProductActionPage';
 
 const routes = [
 	{
@@ -25,6 +26,11 @@ const routes = [
 		path: '/manage',
 		exact : false,
 		main : () => <ProductListPage />
+	},
+	{
+		path: '/products/add',
+		exact : false,
+		main : () => <ProductActionPage />
 	},
 	{
 		path: '',

@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
 
 
 class ProducItems extends Component{
 
     render(){
-            var {product, index} = this.props;
-             console.log(product);
+            let {product,index} = this.props;
+           
         return (
 
             <tr>
@@ -14,7 +13,7 @@ class ProducItems extends Component{
                     <td className="text-center">{product.id}</td>
                     <td className="text-center">{product.name}</td>
                     <td className="text-center">{product.price}</td>
-                    <td className="text-center">Active</td>
+                    <td className="text-center">{product.description}</td>
                     <td className="text-center">
                         <button type="button" className="btn btn-warning">
                             <span className="fa fa-pencil mr-5"></span>Edit

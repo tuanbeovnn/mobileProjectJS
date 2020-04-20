@@ -42,10 +42,6 @@ const MenuLink = ({label, to, activeOnlyWhenExact}) =>{
         />
         )
 }
-
-
-
-
 class Header extends Component{
         render(){
             return (
