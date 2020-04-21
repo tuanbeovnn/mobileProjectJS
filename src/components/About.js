@@ -1,20 +1,46 @@
 import React, {Component} from 'react';
-
-
+import './../App.css';
 class About extends Component{
         render(){
             return (
-		    <section className="bg-light" id="about">
-			      <div className="container">
-			        <header className="mb-5">
-			          <p className="font-weight-bold text-primary text-uppercase letter-spacing-3">Innovative solutions</p>
-			          <h2 className="h3 lined">To boost your creative projects</h2>
-			        </header>
-			        <p className="lead text-muted">Lorem ipsum dolor sit amet, <strong className="text-dark">consetetur sadipscing elitr, </strong> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</p>
-			        <p className="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. </p>
-			        <p className="text-muted mb-0">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-			      </div>
-		    </section>
+		    <section id="about" className="about">
+      <div className="container">
+
+        <div className="section-title">
+          <span>About Me</span>
+          <h2>About Me</h2>
+          <p>Tuan Nguyen. I am studying in Vaasa City</p>
+        </div>
+
+        <div className="row">
+          <div className="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div className="col-lg-8 d-flex flex-column align-items-stretch">
+            <div className="content pl-lg-4 d-flex flex-column justify-content-center">
+              <div className="row">
+                <div className="col-lg-6">
+                  <ul>
+                    <li><i className="icofont-rounded-right"></i> <strong>Name:</strong>Tuan Nguyen</li>
+                    <li><i className="icofont-rounded-right"></i> <strong>Website:</strong> www.tuannguyen.com.vn</li>
+                    <li><i className="icofont-rounded-right"></i> <strong>Phone:</strong> +358 465464028</li>
+                    <li><i className="icofont-rounded-right"></i> <strong>City:</strong> City : Vaasa, Finland</li>
+                  </ul>
+                </div>
+                <div className="col-lg-6">
+                  <ul>
+                    <li><i className="icofont-rounded-right"></i> <strong>Age:</strong>Hide</li>
+                    <li><i className="icofont-rounded-right"></i> <strong>Degree:</strong> Bachelor</li>
+                    <li><i className="icofont-rounded-right"></i> <strong>Email:</strong> tuanquangnguyen1710@gmail.com</li>
+                    <li><i className="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
                 );
     }
 }

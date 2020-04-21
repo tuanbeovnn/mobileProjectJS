@@ -27,7 +27,7 @@ class Product extends Component{
                                        </li>
                                     </ul>
                                     <p className="card-text">
-                                        {product.description}
+                                        MADE BY: {product.description}
                                     </p>
                                     <div className="card-footer">
                                         <span className="left">{product.price}$</span>

@@ -21,6 +21,30 @@ class ProductListPage extends Component{
                 });
             });
         }
+
+        onDelete = (id) =>{
+            var{products} = this.state;
+            callApi(`products/${id}`,'DELETE', null).then(res=> {
+                if (res.status ===200) {
+                    var index = this.findIndex(products,id);
+                    if (index != -1) {
+                        products.splice(index,1);
+                        this.setState({
+                            products: products
+                        });
+                    }
+                }
+            });
+        }
+
+        findIndex = (products, id)=>{
+            var result = -1;
+            products.forEach((product, index) =>{
+                if (product.id === id) {
+                    result = index;
+                }
+            });
+        }
         render(){
             // var {products} = this.props;
              var {products} =this.state;
@@ -30,7 +54,7 @@ class ProductListPage extends Component{
             return (
               <div className="container">
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <Link to="/products/add" className="btn btn-primary">
+                    <Link to="/add" className="btn btn-primary">
                         Add Product
                     </Link>
                   </div>
@@ -46,7 +70,13 @@ class ProductListPage extends Component{
         if (products.length >0) {
             result = products.map((product,index) => {
                 return(
-                    <ProductItem key ={index} product = {product} index = {index}/>// show the list of product
+                    <ProductItem 
+                    key ={index} 
+                    product = {product} 
+                    index = {index}
+                    onDelete ={this.onDelete}
+
+                    />// show the list of product
                 ); 
             });
         }

@@ -15,7 +15,7 @@ const menus = [
         exact : false
     },
     {
-        name: 'ManageProducts',
+        name: 'Manage Products',
         to: '/manage',
         exact : false
     },
